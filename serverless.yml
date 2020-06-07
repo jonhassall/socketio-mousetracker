@@ -1,0 +1,19 @@
+service: mousetracker
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: prod
+  region: us-east-1
+  memorySize: 128
+functions:
+  app:
+    handler: app/app.handler
+    events: 
+      - http: 
+          path: /
+          method: ANY
+          cors: true
+      - http: 
+          path: /{proxy+}
+          method: ANY
+          cors: true
