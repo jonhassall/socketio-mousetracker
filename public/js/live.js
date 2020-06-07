@@ -64,7 +64,7 @@ function moveCursorToPosition(data) {
 
 //On mouse movement, using throttling, send mouse position via socket.io
 document.getElementsByTagName("BODY")[0].addEventListener("mousemove", handleMouseMove);
-var sendMousePosition_throttled = _.throttle(sendMousePosition, 250);
+var sendMousePosition_throttled = _.throttle(sendMousePosition, 50);
 
 function handleMouseMove(event) {
     sendMousePosition_throttled(event);
