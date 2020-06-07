@@ -10,7 +10,8 @@ Live demo usually available at [http://mousetracker.jonhassall.com](http://mouse
 
 To run:
 
-```git clone
+```
+git clone
 npm install
 npm start
 ```
