@@ -23,8 +23,9 @@ var server = http.createServer(app);
 
 /**
  * Add socket.io server on the same port
+ * It would be nice to separate this into a separate file
  */
-const io = require('socket.io')(server);
+const io = require('socket.io')(server, {path: '/mousetracker/socket.io'});
 let sequenceNumberByClient = new Map();
 var cursorPositionsSaved = {};
 
@@ -33,6 +34,7 @@ io.on('connection', socket => {
   socket.emit('welcome', { message: 'Welcome!', id: socket.id, cursorPositionsSaved: cursorPositionsSaved });
   console.log(cursorPositionsSaved);
   socket.broadcast.emit('broadcast', { message: 'Joined', id: socket.id });
+
   //Initialize this client's sequence number
   sequenceNumberByClient.set(socket, 1);
 
