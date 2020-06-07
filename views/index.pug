@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  p
+  p
+  //- div(class='live-container')
+  p This page uses socket.io (websockets with fallbacks) to track the live position of the mouse of everyone connected to the page.
+  p Move your mouse around, and watch the mice of anyone else connected move in real time.
+  p Uses: NodeJS, Express, Socket.io, Websockets, HTML, JavaScript, CSS.
+
+  script(src='/socket.io/socket.io.js')
+  script(src='/js/lodash.min.js')
+  script(src='/js/live.js')

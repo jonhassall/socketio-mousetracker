@@ -1,0 +1,35 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: grey;
+  overflow: hidden;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.mousePosition {
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  margin-top: -10px;
+  border-radius: 3px;
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+#live-container {
+  width: 200px;
+  height: 200px;
+  border-color: lightgrey;
+  border-width: 1px;
+  border-style: groove;
+}
