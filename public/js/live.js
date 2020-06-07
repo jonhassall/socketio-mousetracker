@@ -1,7 +1,7 @@
 //socket.io cursor sharing
 
 //SocketIO client
-const socket = io("", {path: "/socket.io"});
+const socket = io("", {path: "/mousetracker/socket.io"});
 
 //Respond to various events
 socket.on('connect', function () {
