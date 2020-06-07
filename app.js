@@ -25,6 +25,7 @@ app.use(sassMiddleware({
   sourceMap: true
 }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/mousetracker', express.static('public'))
 
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
