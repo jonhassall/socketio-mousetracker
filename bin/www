@@ -26,7 +26,7 @@ var server = http.createServer(app);
  * Add socket.io server on the same port
  * It would be nice to separate this into a separate file
  */
-const io = require('socket.io')(server, {path: '/mousetracker/socket.io'});
+const io = require('socket.io')(server, {path: '/socket.io'});
 let sequenceNumberByClient = new Map();
 var cursorPositionsSaved = {};
 
