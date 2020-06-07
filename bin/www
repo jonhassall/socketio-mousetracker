@@ -7,14 +7,15 @@
 var app = require('../app');
 var debug = require('debug')('socketio-thing:server');
 var http = require('http');
-require('dotenv').config()
+require('dotenv').config();
+const serverless = require('serverless-http');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+// var port = normalizePort(process.env.PORT || '3000');
+// app.set('port', port);
 
 /**
  * Create HTTP server.
@@ -61,7 +62,8 @@ io.on('connection', socket => {
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+// server.listen(port);
+module.exports.handler = serverless(app);
 server.on('error', onError);
 server.on('listening', onListening);
 

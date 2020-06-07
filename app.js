@@ -1,4 +1,5 @@
 var createError = require('http-errors');
+const serverless = require('serverless-http');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -45,4 +46,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+// module.exports = app;
+module.exports.handler = serverless(app);
