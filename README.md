@@ -10,8 +10,8 @@ Live demo usually available at [http://mousetracker.jonhassall.com](http://mouse
 
 To run:
 
-git clone
+`git clone
 npm install
-npm start
+npm start`
 
 And open in browser at [http://localhost:3000](http://localhost:3000)
