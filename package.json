@@ -13,7 +13,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "socket.io": "^2.3.0"
   }
 }
